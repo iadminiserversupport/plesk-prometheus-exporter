@@ -13,3 +13,4 @@ dependencies = ["prometheus-client>=0.20,<1", "requests>=2.31,<3"]
 plesk-prometheus-exporter = "plesk_exporter.exporter:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
