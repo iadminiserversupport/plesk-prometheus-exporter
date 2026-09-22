@@ -1,0 +1,11 @@
+services:
+  plesk-exporter:
+    build: .
+    restart: unless-stopped
+    ports: ["9784:9784"]
+    environment:
+      PLESK_URL: "https://plesk.example.com:8443"
+      PLESK_API_KEY: "${PLESK_API_KEY}"
+      PLESK_VERIFY_SSL: "true"
+      PLESK_TIMEOUT: "10"
+      PORT: "9784"

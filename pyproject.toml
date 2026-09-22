@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "plesk-prometheus-exporter"
+version = "0.1.0"
+description = "Prometheus exporter for read-only Plesk REST API metrics"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["prometheus-client>=0.20,<1", "requests>=2.31,<3"]
+[project.scripts]
+plesk-prometheus-exporter = "plesk_exporter.exporter:main"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
